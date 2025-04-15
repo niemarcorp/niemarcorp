@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 30 },
