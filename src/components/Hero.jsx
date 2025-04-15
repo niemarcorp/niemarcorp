@@ -21,32 +21,40 @@ const itemVariants = {
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white py-24 px-6 text-center">
+    <section
+      className="bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white pt-40 pb-28 px-6 text-center"
+      role="region"
+      aria-label="Presentación NieMar Corp"
+    >
       <motion.div
-        className="max-w-4xl mx-auto"
+        className="max-w-5xl mx-auto px-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.h1
-          className="text-4xl md:text-6xl font-bold mb-6 tracking-tight"
+          className="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight"
           variants={itemVariants}
         >
-          Soluciones Tecnológicas con Impacto Real
+          NieMar Corp: Soluciones Tecnológicas con Impacto Real
         </motion.h1>
+
         <motion.p
-          className="text-lg md:text-xl mb-10 text-gray-300"
+          className="text-xl md:text-2xl mb-12 text-gray-300"
           variants={itemVariants}
         >
           Desarrollo web, simulaciones CFD, soporte Linux y más. <br className="hidden md:block" />
           Construido con React, Vite y TailwindCSS.
         </motion.p>
+
         <motion.a
           href="/contacto"
+          title="Ir a la sección de contacto"
+          aria-label="Ir a la sección de contacto"
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
-          className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition duration-300"
+          className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold text-lg py-4 px-10 rounded-2xl shadow-lg transition duration-300"
         >
           Contactame
         </motion.a>

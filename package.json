@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://niemarcorp.github.io/niemarcorp/",
   "scripts": {
-    "dev": "vite",
+    "dev": "BROWSER=firefox vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

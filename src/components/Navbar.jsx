@@ -2,7 +2,19 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { motion } from "framer-motion";
+
+const navItems = [
+  ["Inicio", "/"],
+  ["Sobre mí", "/sobre-mi"],
+  ["Servicios", "/servicios"],
+  ["Web", "/servicios/web"],
+  ["CFD", "/servicios/cfd"],
+  ["Linux", "/servicios/linux"],
+  ["Tutoriales", "/servicios/tutoriales"],
+  ["Portafolio", "/portafolio"],
+  ["Blog", "/blog"],
+  ["Contacto", "/contacto"],
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,40 +37,20 @@ const Navbar = () => {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="text-white text-xl font-bold">
-          Niemar Corp
+        {/* Nombre en chiquito */}
+        <Link to="/" className="text-white text-xl font-bold tracking-tight" aria-label="Inicio">
+          <span aria-hidden="true">NieMar Corp</span>
         </Link>
 
-        {/* Menú en desktop */}
-        <ul className="hidden md:flex gap-6 text-white font-medium">
-          {[
-            ["Inicio", "/"],
-            ["Sobre mí", "/sobre-mi"],
-            ["Servicios", "/servicios"],
-            ["Web", "/servicios/web"],
-            ["CFD", "/servicios/cfd"],
-            ["Linux", "/servicios/linux"],
-            ["Tutoriales", "/servicios/tutoriales"],
-            ["Portafolio", "/portafolio"],
-            ["Blog", "/blog"],
-            ["Contacto", "/contacto"],
-          ].map(([label, path]) => (
-            <li key={label}>
-              <Link to={path} className="hover:text-cyan-400 transition">{label}</Link>
-            </li>
-          ))}
-        </ul>
-
-        {/* Botón menú móvil */}
+        {/* Botón menú hamburguesa (visible siempre en móviles) */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-white focus:outline-none">
+          <button onClick={toggleMenu} className="text-white focus:outline-none" aria-label="Abrir menú">
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </nav>
 
-      {/* Menú móvil desplegable */}
+      {/* Menú desplegable móvil */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -66,18 +58,7 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
           className="md:hidden bg-black/90 text-white px-6 pb-6 pt-4 space-y-4 text-center"
         >
-          {[
-            ["Inicio", "/"],
-            ["Sobre mí", "/sobre-mi"],
-            ["Servicios", "/servicios"],
-            ["Web", "/servicios/web"],
-            ["CFD", "/servicios/cfd"],
-            ["Linux", "/servicios/linux"],
-            ["Tutoriales", "/servicios/tutoriales"],
-            ["Portafolio", "/portafolio"],
-            ["Blog", "/blog"],
-            ["Contacto", "/contacto"],
-          ].map(([label, path]) => (
+          {navItems.map(([label, path]) => (
             <Link
               key={label}
               to={path}
