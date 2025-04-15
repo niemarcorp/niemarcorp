@@ -4,4 +4,41 @@
     <loc>https://niemarcorp.github.io/</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://niemarcorp.github.io/sobre-mi</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://niemarcorp.github.io/servicios</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://niemarcorp.github.io/servicios/web</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://niemarcorp.github.io/servicios/cfd</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://niemarcorp.github.io/servicios/linux</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://niemarcorp.github.io/servicios/tutoriales</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://niemarcorp.github.io/portafolio</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://niemarcorp.github.io/blog</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://niemarcorp.github.io/contacto</loc>
+    <priority>0.6</priority>
+  </url>
 </urlset>
+
